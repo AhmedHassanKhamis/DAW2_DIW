@@ -1,0 +1,19 @@
+@font-face {
+    src: url(../fuentes/Montserrat-Regular.ttf);
+    font-family: 'texto';
+    font-weight: 400;
+}
+
+@font-face {
+    src: url(../fuentes/Raleway-Bold.ttf);
+    font-family: 'cab2';
+    font-weight: 900;
+
+}
+
+@font-face {
+    src: url(../fuentes/Raleway-Regular.ttf);
+    font-family: 'cab1';
+    font-weight: 300;
+
+}
