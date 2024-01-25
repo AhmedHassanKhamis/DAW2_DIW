@@ -601,15 +601,14 @@ hr {
     }
 
     /*Formularios*/
-    .formulario img[alt="ubicacion"] {
-        width: 55px;
-        height: auto;
-    }
 
+    .formulario img[alt="ubicacion"],
     .formulario img[alt="calendario"],
     .formulario img[alt="monigote"] {
-        width: 65px;
         height: auto;
+        width: auto;
+        scale: 1.2;
+        margin: 10px;
     }
 
     .localizacion label,
@@ -666,7 +665,7 @@ hr {
     }
 
     .buscador {
-        height: 250 px;
+        height: 250px;
     }
 
     .filtros img {
@@ -683,6 +682,14 @@ hr {
 
     }
 
+    .formulario img[alt="ubicacion"],
+    .formulario img[alt="calendario"],
+    .formulario img[alt="monigote"] {
+        height: auto;
+        width: auto;
+        scale: 1.5;
+        margin: 15px;
+    }
 
     .localizacion label,
     .checkin label,
@@ -705,6 +712,8 @@ hr {
         width: 40px;
     }
 
+
+    
     /*Botón buscar*/
     .btnBuscar {
         bottom: -15px;
@@ -719,9 +728,6 @@ hr {
     }
 
     /*Radio buttons*/
-    .opcionales {
-        margin-top: 30px;
-    }
 
     input[type="radio"] {
         transform: scale(2.5);
