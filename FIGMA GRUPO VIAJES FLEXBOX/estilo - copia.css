@@ -188,6 +188,7 @@ button {
 @media screen and (min-width: 1366px) {}
 
 @media screen and (max-width: 1919.5px) {
+
     .cabecera ul,
     .cabecera li {
         display: none;
@@ -313,7 +314,7 @@ button {
 .filtros img {
     width: 20px;
     height: 20px;
-    vertical-align: middle;
+    vertical-align: middle; 
     margin-right: 10px;
 }
 
@@ -350,7 +351,7 @@ button {
 .formulario div div {
     font-size: 16px;
     padding: 10px;
-}
+}   
 
 .formulario .localizacion,
 .formulario .checkin,
@@ -386,14 +387,11 @@ button {
     margin-right: 15px;
 }
 
-.formulario hr {
-    width: 85%;
-    margin-inline: auto;
-}
-
 /*Lineas separadores formulario vuelos*/
 hr {
+    width: 87%;
     border-color: #0E3157;
+    margin-left: 17px;
 }
 
 /*Estilos formularios*/
@@ -434,7 +432,7 @@ hr {
     justify-content: center;
 }
 
-.btnBuscar button {
+.btnBuscar button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -445,7 +443,7 @@ hr {
 
 /*Estilo input tipo radio de opciones*/
 .opcionales {
-    display: flex;
+    display: flex;    
     justify-content: space-around;
     align-items: center;
 
@@ -464,7 +462,7 @@ hr {
         height: 165px;
     }
 
-    .filtros {
+    .filtros{
         flex-direction: row-reverse;
         margin-bottom: 10px;
     }
@@ -484,7 +482,7 @@ hr {
         margin-left: 0px;
     }
 
-    .requisitos {
+    .requisitos{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -492,21 +490,20 @@ hr {
         margin: 0px;
     }
 
-    .requisitos>div {
+    .requisitos > div{
         padding-top: 10px;
     }
 
-    .requisitos>:not(:last-child) {
+    .requisitos >:not(:last-child){
         border-right: 1px solid #0E3157;
     }
 
-    .formulario hr {
+    .formulario hr{
         display: none;
     }
 
-    .formulario>div {
+    .formulario > div {
         padding: 0;
-        display: flex;
     }
 
     .formulario .localizacion,
@@ -546,7 +543,7 @@ hr {
         font-size: 14px;
     }
 
-    .requisitos+div+div {
+    .requisitos + div + div{
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -588,7 +585,7 @@ hr {
         font-size: 22px;
     }
 
-    .requisitos {
+    .requisitos{
         justify-content: space-evenly;
     }
 
@@ -642,7 +639,7 @@ hr {
         font-size: 20px;
     }
 
-
+    
     .localizacion input,
     .checkin input,
     .checkout input,
@@ -682,6 +679,7 @@ hr {
         margin-top: 69px;
         margin-right: -60px;
         width: 140px;
+
     }
 
     .formulario img[alt="ubicacion"],
@@ -715,7 +713,7 @@ hr {
     }
 
 
-
+    
     /*Botón buscar*/
     .btnBuscar {
         bottom: -15px;
@@ -743,33 +741,22 @@ hr {
 
 .contenedorProductos {
     margin-top: 30px;
-    height: 600px;
+    position: relative;
     color: #0E3157;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.contenedorProductos h2 {
-    height: 35px;
 }
 
 .contenedorTarjetas {
     margin: 0 auto;
     width: 95%;
-    display: flex;
-    flex:1;
-
-    flex-direction: column;
-    justify-content: space-around;
 }
 
 .cardViaje {
+    position: relative;
     /*Añadido por Christian para los triangulos*/
     background-color: #d8b5ab;
     border-radius: 25px;
-    align-items: center;
+    margin-bottom: 30px;
+    padding-top: 3px;
 }
 
 .cardViaje:nth-of-type(2) {
@@ -777,20 +764,29 @@ hr {
 }
 
 .contenedorTexto-boton-Tarjeta {
-    display: flex;
-    font-family: 'Readex Pro';
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-}
-
-.contenedorTitulo-Texto-boton-Tarjeta {
-    display: flex;
-    flex-direction: column;
-    padding-inline: 5px;
+    padding-bottom: 5px;
 }
 
 /*Descuento Madrid y Barcelona*/
+.descuento {
+    border-left: 34.5px solid #904214;
+    border-right: 34.5px solid transparent;
+    border-top: 34.5px solid #904214;
+    border-bottom: 34.5px solid transparent;
+    position: absolute;
+    top: -0.7px;
+}
+
+.desc-text {
+    transform: rotate(-45deg);
+    text-shadow: 1px 1px 3px rgb(61, 61, 61);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 12px;
+    left: -3px;
+}
 
 .imagenTarjeta {
     float: left;
@@ -808,12 +804,14 @@ hr {
 }
 
 .botonTarjeta {
+    float: right;
     padding: 10px 4px;
     border-radius: 15px;
     background-color: #904214;
     color: #d8b5ab;
     font-size: 1.6rem;
     font-family: "Readex Pro";
+    margin-right: 12px;
 }
 
 .tituloTarjeta {
@@ -822,9 +820,14 @@ hr {
     font-weight: 400;
 }
 
-
+.contenedorTexto-boton-Tarjeta {
+    margin-top: -12px;
+    font-family: 'Readex Pro';
+    font-size: 1.1rem;
+}
 
 .separadorTextoTarjeta {
+    width: 130px;
     margin-bottom: 5px;
     margin-top: 5px;
 }
@@ -832,11 +835,6 @@ hr {
 .separadorFloat {
     clear: both;
     content: none;
-}
-
-.contenido {
-    display: flex;
-    flex-direction: column;
 }
 
 .btnVerMas {
@@ -849,7 +847,9 @@ hr {
     height: 42px;
     border-radius: 25px;
     margin-bottom: 30px;
+    position: relative;
     left: 50%;
+    transform: translate(-50%);
 }
 
 /*DIEGO NUEVO CODIGO*/
@@ -859,19 +859,12 @@ hr {
         height: auto;
     }
 
-    /* .cardViaje:nth-child(odd) {
-        display: flex;
-        flex-direction: row;
+    .cardViaje:nth-child(odd) {
+        float: left;
     }
 
     .cardViaje:nth-child(even) {
-        display: flex;
-    } */
-    .contenedorTarjetas {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        float: right;
     }
 
     .imagenTarjeta {
@@ -895,6 +888,7 @@ hr {
 
     .botonTarjeta {
         margin-top: 10px;
+        float: right;
         width: auto;
         padding: 7px 5px;
         border-radius: 12px;
@@ -974,6 +968,15 @@ hr {
         height: 225px;
     }
 
+    .cardViaje:nth-child(odd) {
+        margin-left: 7%;
+    }
+
+    .cardViaje:nth-child(even) {
+        margin-right: 7%;
+
+    }
+
     .tituloTarjeta {
         margin-top: 15px;
     }
@@ -1021,7 +1024,7 @@ hr {
 
 
 /* Footer*/
-/* .pie {
+.pie {
     padding: 20px;
     background-color: #0E3157;
     color: white;
@@ -1066,81 +1069,24 @@ hr {
 .logoTravelzFooter {
     display: none;
 }
- */
-footer {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #0E3157;
-    color: white;
-    font-family: "Readex Pro-ExtraLight";
-    font-weight: 600;
-    letter-spacing: 2px;
-}
-
-footer div:first-of-type {
-    display: flex;
-    margin-right: 40px;
-}
-
-footer>div:first-of-type>div {
-    display: none;
-}
-
-footer>div>div {
-    display: flex;
-    flex-direction: column;
-}
-
-footer div>ul {
-    align-self: center;
-    list-style: none;
-}
-
-footer a>img {
-    width: 40px;
-    margin-top: 15px;
-}
-
-footer>div>div>h3 {
-    font-size: 28px;
-    margin-top: 30px;
-}
-
-footer>div>div>a {
-    margin: 10px;
-    text-decoration: none;
-    font-size: 19px;
-    color: white;
-    margin-bottom: 0;
-}
 
 /*IVAN*/
 @media screen and (min-width: 1024px) {
-
     .pie {
         min-height: 300px;
-        flex-direction: row;
-        align-items: flex-start;
     }
 
-    footer div:first-of-type {
-        flex-direction: column;
-    }
-
-    footer div:first-of-type>div {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
+    .logoTravelzFooter {
+        float: left;
+        display: block;
     }
 
     .logoTravelzFooter img {
         padding: 6px;
+        margin-bottom: -5px;
         width: 58px;
         background-color: white;
         border-radius: 18px;
-        margin-bottom: 22px;
     }
 
     .logoTravelzFooter span {
@@ -1151,28 +1097,42 @@ footer>div>div>a {
     }
 
     .redes {
-        display: flex;
+        float: left;
+        clear: left;
+        display: block;
         margin-right: 0;
         margin-top: 0;
     }
 
     .redes li {
+        display: inline-block;
         margin-right: 20px;
     }
 
     .contacto {
-        display: flex;
+        float: right;
+        margin-top: -180px;
+    }
+
+    .contacto div {
+        float: left;
+        /* padding: 20px; */
+        letter-spacing: 2px;
+        margin: 10px;
     }
 
     .contacto a {
         text-decoration: none;
         color: white;
+        display: block;
         font-size: 19px;
+
     }
 
     .contacto h3 {
         font-size: 28px;
     }
+
 }
 
 @media screen and (min-width: 1366px) {
@@ -1198,6 +1158,11 @@ footer>div>div>a {
 
     .redes img {
         width: 55px;
+
+    }
+
+    .contacto {
+        margin-top: -200px;
     }
 
     .contacto .contacto-der {
@@ -1207,7 +1172,6 @@ footer>div>div>a {
 
     .pie h3 {
         font-size: 40px;
-        margin-bottom: 50px;
     }
 
     .pie a {
@@ -1218,7 +1182,6 @@ footer>div>div>a {
 @media screen and (min-width: 1920px) {
     .pie {
         min-height: 400px;
-        justify-content: space-around;
     }
 
     .logoTravelzFooter {
@@ -1240,6 +1203,10 @@ footer>div>div>a {
     .redes img {
         width: 65px;
         margin-left: 23px;
+    }
+
+    .contacto {
+        margin-top: -255px;
     }
 
     .pie h3 {

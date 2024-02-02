@@ -149,10 +149,8 @@ button {
     font-family: 'Jomhuria', sans-serif;
     color: white;
     height: 40px;
+    text-align: center;
     padding: 16px 10px 5px 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 
@@ -164,8 +162,7 @@ button {
 
 /*Poner en linea los elementos de la cabecera*/
 .cabecera div {
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
     width: 150px;
 }
 
@@ -173,13 +170,27 @@ button {
 .cabecera div img {
     width: 30px;
     height: 30px;
+    vertical-align: middle;
+    margin-top: 3px;
+    float: left;
+    margin-left: -9px;
 }
 
 /*Texto: TRAVELZ*/
 .cabecera div h1 {
+    text-align: center;
     font-weight: 100;
     font-size: 64px;
     line-height: 45px;
+}
+
+/*Flotar imágenes cabecera*/
+.cabecera button:first-child {
+    float: left;
+}
+
+.cabecera button:last-child {
+    float: right;
 }
 
 /*AHMED*/
@@ -188,6 +199,7 @@ button {
 @media screen and (min-width: 1366px) {}
 
 @media screen and (max-width: 1919.5px) {
+
     .cabecera ul,
     .cabecera li {
         display: none;
@@ -200,18 +212,19 @@ button {
         font-family: 'Jomhuria', sans-serif;
         color: white;
         height: 125px;
-        align-items: center;
-        justify-content: space-around;
+        padding: 16px 10px 5px 10px;
     }
 
     .cabecera ul {
         width: 1204px;
+        margin-top: 55px;
     }
 
     .cabecera ul,
     li {
-        display: flex;
+        display: inline-block;
         height: 42px;
+        padding-bottom: -10px;
     }
 
     .cabecera li {
@@ -247,6 +260,9 @@ button {
         margin-left: 15px;
     }
 
+    .cabecera ul+button img {
+        margin: 35px 65px 0 0;
+    }
 
     .cabecera>button:first-child {
         display: none;
@@ -255,12 +271,16 @@ button {
     /*Poner en linea los elementos de la cabecera*/
     .cabecera div {
         width: 444px;
+        float: left;
+        margin: 35px 0 0 10px;
     }
 
     /*Logo Travelz*/
     .cabecera div img {
         width: 59px;
         height: 59px;
+        float: left;
+        margin-left: 15px;
     }
 
     /*Texto: TRAVELZ*/
@@ -268,6 +288,7 @@ button {
         font-weight: 100;
         font-size: 120px;
         line-height: 80px;
+        float: left;
     }
 
 }
@@ -279,14 +300,14 @@ button {
 
 @media screen and (min-width: 1920px) {
     .fotoHero {
-        display: flex;
+        display: inline-block;
         text-align: center;
         margin: 0 auto;
         width: 100%;
     }
 
     .fotoHero img {
-        width: 25%;
+        width: 24.87%;
         padding: 0;
         height: 333.58px;
     }
@@ -314,31 +335,27 @@ button {
     width: 20px;
     height: 20px;
     vertical-align: middle;
-    margin-right: 10px;
 }
 
 .filtros {
     color: #0E3157;
     font-size: 14px;
     margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .filtros button {
-    margin-left: 10px;
+    float: left;
 }
 
 .filtros span {
     font-size: 14px;
     color: #0E3157;
     font-weight: bold;
+    margin-left: 10px;
 }
 
 .filtros div {
-    width: 200px;
-    display: flex;
-    justify-content: space-between;
+    float: right;
     line-height: 16px;
 }
 
@@ -347,7 +364,7 @@ button {
 }
 
 /*Formulario naranja de vuelos*/
-.formulario div div {
+.formulario div {
     font-size: 16px;
     padding: 10px;
 }
@@ -356,8 +373,7 @@ button {
 .formulario .checkin,
 .formulario .checkout,
 .formulario .viajeros {
-    display: flex;
-    margin-left: 20px;
+    margin-left: 14px;
 }
 
 .formulario label {
@@ -365,6 +381,7 @@ button {
 }
 
 .formulario img {
+    float: left;
     width: 40px;
     height: 50px;
     margin-right: 10px;
@@ -386,14 +403,12 @@ button {
     margin-right: 15px;
 }
 
-.formulario hr {
-    width: 85%;
-    margin-inline: auto;
-}
-
 /*Lineas separadores formulario vuelos*/
 hr {
+    width: 87%;
     border-color: #0E3157;
+    margin-left: 17px;
+    margin-left: 0;
 }
 
 /*Estilos formularios*/
@@ -427,32 +442,22 @@ hr {
 .formulario button img {
     width: 25px;
     height: 25px;
+    margin-left: 42px;
+    margin-right: -50px;
+    margin-top: 2px;
 }
 
 .btnBuscar {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
-
-.btnBuscar button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-}
-
-
 
 /*Estilo input tipo radio de opciones*/
 .opcionales {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
+    margin-top: 12px;
+    text-align: center;
 }
 
 .opcionales label {
-    display: flex;
     margin-left: 1%;
 }
 
@@ -464,18 +469,19 @@ hr {
         height: 165px;
     }
 
-    .filtros {
-        flex-direction: row-reverse;
-        margin-bottom: 10px;
-    }
-
     .filtros div {
-        width: 200px;
-        display: flex;
-        justify-content: space-between;
-        line-height: 16px;
+        float: left;
+        width: 50%;
     }
 
+    .filtros div span {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .filtros button {
+        float: right;
+    }
 
     /*Formularios*/
     .separadorForm {
@@ -484,29 +490,19 @@ hr {
         margin-left: 0px;
     }
 
-    .requisitos {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0px;
-        margin: 0px;
+    .formulario div {
+        float: left;
     }
 
-    .requisitos>div {
-        padding-top: 10px;
-    }
-
-    .requisitos>:not(:last-child) {
-        border-right: 1px solid #0E3157;
-    }
 
     .formulario hr {
-        display: none;
-    }
-
-    .formulario>div {
-        padding: 0;
-        display: flex;
+        float: left;
+        display: inline-block;
+        margin-left: -40px;
+        margin-top: 45px;
+        margin-right: -46px;
+        width: 91.88px;
+        transform: rotate(90deg);
     }
 
     .formulario .localizacion,
@@ -546,21 +542,24 @@ hr {
         font-size: 14px;
     }
 
-    .requisitos+div+div {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-
     /*Botón Buscar*/
+    .btnBuscar {
+        position: relative;
+        bottom: 0px;
+        left: 5%;
+    }
 
     .btnBuscar button {
         line-height: 31px;
         font-size: 16px;
         height: 47.22px;
         width: 163.36px;
+        padding-left: 10px;
     }
 
+    .btnBuscar button img {
+        margin-left: 22px;
+    }
 
     /*Radio buttons*/
     .opcionales {
@@ -569,9 +568,17 @@ hr {
         margin-top: 0;
     }
 
+    .opcionales label {
+        margin-left: 12%;
+    }
+
+    .opcionales input {
+        margin-top: 30px;
+        margin-right: 2%;
+    }
+
     input[type="radio"] {
         transform: scale(1.5);
-        margin-right: 10px;
     }
 }
 
@@ -588,10 +595,6 @@ hr {
         font-size: 22px;
     }
 
-    .requisitos {
-        justify-content: space-evenly;
-    }
-
     .filtros img {
         width: 31.28px;
         height: 29.11px;
@@ -599,19 +602,23 @@ hr {
 
     }
 
-    .filtros div {
-        width: 350px;
+    /*Formularios*/
+    .formulario img[alt="ubicacion"] {
+        width: 55px;
+        height: auto;
     }
 
-    /*Formularios*/
-
-    .formulario img[alt="ubicacion"],
     .formulario img[alt="calendario"],
     .formulario img[alt="monigote"] {
+        width: 65px;
         height: auto;
-        width: auto;
-        scale: 1.2;
-        margin: 10px;
+    }
+
+    .formulario .localizacion,
+    .formulario .checkin,
+    .formulario .checkout,
+    .formulario .viajeros {
+        margin-top: 10px;
     }
 
     .localizacion label,
@@ -626,6 +633,7 @@ hr {
     }
 
     .formulario button img {
+        margin-right: -30px;
         width: 28px;
         height: auto;
     }
@@ -642,16 +650,6 @@ hr {
         font-size: 20px;
     }
 
-
-    .localizacion input,
-    .checkin input,
-    .checkout input,
-    .viajeros input {
-        width: 250px;
-        line-height: 20px;
-    }
-
-
     /*Radio buttons*/
     input[type="radio"] {
         transform: scale(2);
@@ -664,11 +662,12 @@ hr {
 
     /*Buscador y filtro*/
     .contenedor {
+        max-width: 1432.8px;
         padding-top: 15px;
     }
 
     .buscador {
-        height: 250px;
+        height: 287px;
     }
 
     .filtros img {
@@ -676,21 +675,23 @@ hr {
     }
 
     /*Formularios*/
+    .separadorForm {
+        margin-top: 50px;
+    }
 
     .formulario hr {
         margin-left: -60px;
         margin-top: 69px;
         margin-right: -60px;
         width: 140px;
+
     }
 
-    .formulario img[alt="ubicacion"],
-    .formulario img[alt="calendario"],
-    .formulario img[alt="monigote"] {
-        height: auto;
-        width: auto;
-        scale: 1.5;
-        margin: 15px;
+    .formulario .localizacion,
+    .formulario .checkin,
+    .formulario .checkout,
+    .formulario .viajeros {
+        margin-top: 20px;
     }
 
     .localizacion label,
@@ -714,8 +715,6 @@ hr {
         width: 40px;
     }
 
-
-
     /*Botón buscar*/
     .btnBuscar {
         bottom: -15px;
@@ -730,6 +729,9 @@ hr {
     }
 
     /*Radio buttons*/
+    .opcionales {
+        margin-top: 30px;
+    }
 
     input[type="radio"] {
         transform: scale(2.5);
@@ -743,33 +745,26 @@ hr {
 
 .contenedorProductos {
     margin-top: 30px;
-    height: 600px;
     color: #0E3157;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-}
-
-.contenedorProductos h2 {
-    height: 35px;
+    flex-direction: column;
+    display: flex;
 }
 
 .contenedorTarjetas {
     margin: 0 auto;
     width: 95%;
-    display: flex;
-    flex:1;
-
-    flex-direction: column;
-    justify-content: space-around;
+  
 }
 
 .cardViaje {
     /*Añadido por Christian para los triangulos*/
     background-color: #d8b5ab;
     border-radius: 25px;
-    align-items: center;
+    margin-bottom: 30px;
+    padding-top: 3px;
+    display: flex;
+    flex-direction: row;
 }
 
 .cardViaje:nth-of-type(2) {
@@ -777,23 +772,42 @@ hr {
 }
 
 .contenedorTexto-boton-Tarjeta {
-    display: flex;
-    font-family: 'Readex Pro';
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
+    padding-bottom: 5px;
+        display: flex;
+        margin-top: -12px;
+        font-family: 'Readex Pro';
+        font-size: 1.1rem;
+        align-items: center;
+        flex-direction: row-reverse;
 }
 
 .contenedorTitulo-Texto-boton-Tarjeta {
     display: flex;
     flex-direction: column;
-    padding-inline: 5px;
 }
 
 /*Descuento Madrid y Barcelona*/
+.descuento {
+    border-left: 34.5px solid #904214;
+    border-right: 34.5px solid transparent;
+    border-top: 34.5px solid #904214;
+    border-bottom: 34.5px solid transparent;
+    position: absolute;
+    top: -0.7px;
+}
+
+.desc-text {
+    transform: rotate(-45deg);
+    text-shadow: 1px 1px 3px rgb(61, 61, 61);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 12px;
+    left: -3px;
+}
 
 .imagenTarjeta {
-    float: left;
     border-radius: 25px;
     width: 115px;
     margin-top: 5px;
@@ -814,6 +828,7 @@ hr {
     color: #d8b5ab;
     font-size: 1.6rem;
     font-family: "Readex Pro";
+    margin-left: 30px ;
 }
 
 .tituloTarjeta {
@@ -833,8 +848,7 @@ hr {
     clear: both;
     content: none;
 }
-
-.contenido {
+.contenido{
     display: flex;
     flex-direction: column;
 }
@@ -867,11 +881,11 @@ hr {
     .cardViaje:nth-child(even) {
         display: flex;
     } */
-    .contenedorTarjetas {
+    .contenedorTarjetas{
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     }
 
     .imagenTarjeta {
@@ -1067,7 +1081,7 @@ hr {
     display: none;
 }
  */
-footer {
+ footer {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -1078,37 +1092,37 @@ footer {
     font-weight: 600;
     letter-spacing: 2px;
 }
-
-footer div:first-of-type {
+footer div:first-of-type{
     display: flex;
     margin-right: 40px;
 }
-
-footer>div:first-of-type>div {
+footer > div:first-of-type > div {
     display: none;
-}
+} 
 
-footer>div>div {
+footer > div > div {
     display: flex;
     flex-direction: column;
 }
 
-footer div>ul {
+
+
+footer div > ul {
     align-self: center;
     list-style: none;
 }
 
-footer a>img {
+footer a > img {
     width: 40px;
     margin-top: 15px;
 }
 
-footer>div>div>h3 {
+footer > div > div > h3 {
     font-size: 28px;
     margin-top: 30px;
 }
 
-footer>div>div>a {
+footer > div > div > a {
     margin: 10px;
     text-decoration: none;
     font-size: 19px;
@@ -1118,22 +1132,21 @@ footer>div>div>a {
 
 /*IVAN*/
 @media screen and (min-width: 1024px) {
-
+  
     .pie {
         min-height: 300px;
         flex-direction: row;
         align-items: flex-start;
     }
-
-    footer div:first-of-type {
+    footer div:first-of-type{
         flex-direction: column;
     }
 
-    footer div:first-of-type>div {
+    footer div:first-of-type > div{
         display: flex;
         align-items: center;
         flex-direction: row;
-    }
+    } 
 
     .logoTravelzFooter img {
         padding: 6px;
@@ -1141,6 +1154,7 @@ footer>div>div>a {
         background-color: white;
         border-radius: 18px;
         margin-bottom: 22px;
+
     }
 
     .logoTravelzFooter span {
@@ -1151,6 +1165,7 @@ footer>div>div>a {
     }
 
     .redes {
+        
         display: flex;
         margin-right: 0;
         margin-top: 0;
@@ -1162,17 +1177,22 @@ footer>div>div>a {
 
     .contacto {
         display: flex;
+
     }
+
+   
 
     .contacto a {
         text-decoration: none;
         color: white;
         font-size: 19px;
+
     }
 
     .contacto h3 {
         font-size: 28px;
     }
+
 }
 
 @media screen and (min-width: 1366px) {
@@ -1198,7 +1218,10 @@ footer>div>div>a {
 
     .redes img {
         width: 55px;
+
     }
+
+   
 
     .contacto .contacto-der {
         margin-left: 100px;
@@ -1219,6 +1242,7 @@ footer>div>div>a {
     .pie {
         min-height: 400px;
         justify-content: space-around;
+
     }
 
     .logoTravelzFooter {
@@ -1241,6 +1265,8 @@ footer>div>div>a {
         width: 65px;
         margin-left: 23px;
     }
+
+ 
 
     .pie h3 {
         font-size: 50px;
