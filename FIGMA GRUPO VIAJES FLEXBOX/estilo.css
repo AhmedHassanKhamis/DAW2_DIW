@@ -507,6 +507,7 @@ hr {
     .formulario>div {
         padding: 0;
         display: flex;
+        justify-content: space-around;
     }
 
     .formulario .localizacion,
@@ -743,11 +744,11 @@ hr {
 
 .contenedorProductos {
     margin-top: 30px;
-    height: 600px;
     color: #0E3157;
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 30px;
     justify-content: space-between;
 }
 
@@ -759,8 +760,8 @@ hr {
     margin: 0 auto;
     width: 95%;
     display: flex;
-    flex:1;
-
+    flex: 1;
+    row-gap: 50px;
     flex-direction: column;
     justify-content: space-around;
 }
@@ -869,9 +870,16 @@ hr {
     } */
     .contenedorTarjetas {
         display: flex;
+        flex: 0;
         flex-direction: row;
+        row-gap: 50px;
         flex-wrap: wrap;
         justify-content: space-around;
+    }
+
+        
+    .contenedorProductos h2 {
+        height: auto;
     }
 
     .imagenTarjeta {
