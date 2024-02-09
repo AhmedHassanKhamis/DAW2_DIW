@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0;
+        }
+        nav {
+            margin: 0;
+            /* width: 200px; */
+            padding: 2rem;
+            position: absolute;
+            top:0;
+            /* left:-100%; */
+
+            background-color: chocolate;
+            
+        }
+
+        nav label {
+            padding: 1rem;
+            margin: 0;
+            background-color: chocolate;
+
+            position: absolute;
+            top:0;
+            right: -3rem;
+        }
+
+
+        input#menu {
+            display: none;
+        }
+
+        input#menu:checked + nav{
+            left: 0;
+        }
+
+        input#menu:checked + nav label{
+
+        }
+
+        ul div a{
+            display: block;            
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Cabecera</h1>
+    </header>
+
+    <input type="checkbox" id="menu" >
+
+    <nav>
+        <ul>
+            <label for="menu">X</label>
+            <div>
+                <a href="#">Pino</a>
+                <a href="#">Abeto</a>
+                <a href="#">Alerce</a>
+                <a href="#">Álamo</a>
+                <a href="#">Abedul</a>
+            </div>
+        </ul>
+    </nav>
+
+    <article>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolor nulla provident maxime sit ad quos corporis illum dicta nesciunt ipsum atque soluta unde voluptatum autem, harum sed officia architecto.
+        </p>
+    </article>
+    
+</body>
+
+</html>
